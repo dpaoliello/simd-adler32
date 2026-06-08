@@ -99,7 +99,7 @@ jobs:
       - run: ${{ matrix.deps }}
       - name: Maybe minimal versions
         if: ${{ matrix.variant == 'minimal_versions' }}
-        run: cargo generate-lockfile -Z minimal-versions
+        run: cargo generate-lockfile -Z direct-minimal-versions
 
       - name: Test
         run: |
